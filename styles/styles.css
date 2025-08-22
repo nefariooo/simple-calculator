@@ -1,0 +1,5 @@
+@import "./globalvar.css";
+
+body {
+    background-color: var(--green-200);
+}
