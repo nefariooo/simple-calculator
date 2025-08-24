@@ -50,5 +50,6 @@
 .calc-button{
   @apply text-3xl rounded-sm text-t1-text-dark bg-t1-key-bg-gray h-[56px]  flex items-center justify-center shadow-[0_4px_0px_hsl(28,16%,65%)] 
   tab:h-[70px] tab:text-5xl tab:rounded-xl
-  active:relative active:-bottom-1 cursor-pointer hover:bg-t1-key-bg-gray-hover;
+   active:translate-y-1 cursor-pointer hover:bg-t1-key-bg-gray-hover
+  transition-all duration-200;
 }
