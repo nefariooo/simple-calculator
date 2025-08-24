@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="../tailwindcss/output.css">
+  <script defer src="scripts/script.js"></script>
+  <title>Calculator app</title>
+
+</head>
+<body class="font-league font-bold p-8 bg-t1-bg-main">
+  <main class="h-screen flex flex-col gap-8 justify-center">
+
+
+    <nav class=" flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-t1-text-light">calc</h1>
+      <div class="text-t1-text-light text-[12px]  flex items-baseline-last gap-8">
+        <p class="relative bottom-1">THEME</p>
+
+        <div class="relative flex flex-col items-center justify-around">
+          <div class="flex gap-4.5 text-[14px]">
+            <p class="theme-number">1</p>
+            <p class="theme-number">2</p>
+            <p class="theme-number">3</p>
+          </div>
+          <div class="h-6 bg-t1-bg-toggle rounded-full flex items-center justify-center gap-1.5 px-1.5 ">
+            <label class=" size-4">
+              <input class="hidden peer" name="theme" type="radio" checked >
+              <span class=" theme-button"></span>
+            </label>
+            <label class=" size-4">
+              <input class="hidden peer" name="theme" type="radio">
+              <span class="theme-button"></span>
+            </label>
+            <label class=" size-4">
+              <input class="hidden peer" name="theme" type="radio" >
+              <span class="theme-button"></span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+
+    <div class="display flex items-center justify-end bg-t1-bg-screen w-full h-20 rounded-xl max-h-max">
+      <div id="result" class="p-6 text-4xl relative text-t1-text-light">
+        112,333,444
+      </div>
+    </div>
+
+
+    <div class="bg-t1-bg-toggle p-6 rounded-xl  max-h-max">
+      <div class="buttons-container grid grid-cols-4 gap-4 gap-y-5">
+        <button class="calc-button" id="btn-seven">7</button>
+        <button class="calc-button" id="btn-eight">8</button>
+        <button class="calc-button" id="btn-nine">9</button>
+        <button class="bg-t1-key-bg-blue text-t1-key-bg-gray size-[56px] text-xl rounded-sm shadow-[0_4px_0px_hsl(224,28%,35%)]" id="btn-del">DEL</button>
+        <button class="calc-button" id="btn-four">4</button>
+        <button class="calc-button" id="btn-five">5</button>
+        <button class="calc-button" id="btn-six">6</button>
+        <button class="calc-button" id="btn-add">+</button>
+        <button class="calc-button" id="btn-one">1</button>
+        <button class="calc-button" id="btn-two">2</button>
+        <button class="calc-button" id="btn-three">3</button>
+        <button class="calc-button" id="btn-subtract">-</button>
+        <button class="calc-button" id="btn-decimal-point">.</button>
+        <button class="calc-button" id="btn-zero">0</button>
+        <button class="calc-button" id="btn-divide">/</button>
+        <button class="calc-button peer" id="btn-multiply">x</button>
+        <button class="bg-t1-key-bg-blue h-[56px]  text-t1-key-bg-gray text-xl rounded-sm shadow-[0_4px_0px_hsl(224,28%,35%)] col-span-2 aspect-" id="btn-reset">RESET</button>
+        <button class="bg-t1-key-bg-red h-[56px]  text-t1-key-bg-gray text-xl rounded-sm shadow-[0_4px_0px_hsl(6,70%,34%)] col-span-2 aspect-" id="btn-equal">=</button>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
