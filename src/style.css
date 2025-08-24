@@ -10,12 +10,15 @@
   --color-t1-bg-screen: hsl(224, 36%, 15%);       /* Navy 950 */
 
   --color-t1-key-bg-blue: hsl(225, 21%, 49%);     /* Navy 700 */
+  --color-t1-key-bg-blue-hover: hsl(225, 47%, 71%);     /* Navy 300 */
   --color-t1-key-shadow-blue: hsl(224, 28%, 35%); /* Navy 800 */
 
   --color-t1-key-bg-red: hsl(6, 63%, 50%);        /* Red 600 */
+  --color-t1-key-bg-red-hover: hsl(7, 63%, 60%);        /* Red 300 */
   --color-t1-key-shadow-red: hsl(6, 70%, 34%);    /* Red 800 */
 
   --color-t1-key-bg-gray: hsl(0, 0%, 90%);        /* Gray 200 */
+  --color-t1-key-bg-gray-hover: hsl(0, 0%, 100%);        /* Gray 200 */
   --color-t1-key-shadow-orange: hsl(28, 16%, 65%);/* Gray orange 400 */
 
   --color-t1-text-dark: hsl(221, 14%, 31%);       /* Navy 750 */
@@ -40,12 +43,12 @@
 
 }
 
-
-@layer utilities{
-  .theme-button{
-    @apply mb-0.5 size-4 bg-t1-key-bg-red inline-block rounded-full opacity-0 peer-checked:opacity-100 hover:opacity-50 transition-opacity duration-200 cursor-pointer ;
-  }
+.theme-button{
+    @apply mb-0.5 size-5 bg-t1-key-bg-red inline-block rounded-full opacity-0 peer-checked:opacity-100 hover:opacity-50 transition-opacity duration-200 cursor-pointer ;
 }
+
 .calc-button{
-  @apply text-3xl rounded-sm text-t1-text-dark bg-t1-key-bg-gray size-[56px] flex items-center justify-center shadow-[0_4px_0px_hsl(28,16%,65%)] ;
+  @apply text-3xl rounded-sm text-t1-text-dark bg-t1-key-bg-gray h-[56px]  flex items-center justify-center shadow-[0_4px_0px_hsl(28,16%,65%)] 
+  tab:h-[70px] tab:text-5xl tab:rounded-xl
+  active:relative active:-bottom-1 cursor-pointer hover:bg-t1-key-bg-gray-hover;
 }
