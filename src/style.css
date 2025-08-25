@@ -44,7 +44,7 @@
 }
 
 .theme-button{
-    @apply mb-0.5 size-5 bg-t1-key-bg-red inline-block rounded-full opacity-0 peer-checked:opacity-100 hover:opacity-50 transition-opacity duration-200 cursor-pointer ;
+    @apply mb-0.5 border-1 border-t1-key-bg-red peer-[&:not(:checked)]:bg-transparent  size-5 bg-t1-key-bg-red inline-block rounded-full peer-checked:opacity-100 hover:bg-[#634039] transition-opacity duration-200 cursor-pointer ;
 }
 
 .calc-button{

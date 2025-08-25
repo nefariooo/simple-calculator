@@ -27,18 +27,18 @@
             <p class="theme-number">2</p>
             <p class="theme-number">3</p>
           </div>
-          <div class="h-6 bg-t1-bg-toggle rounded-full flex items-center justify-center gap-1.5 px-1.5 
+          <div class="h-7 bg-t1-bg-toggle rounded-full flex items-center justify-center gap-1.5 px-1.5 
           tab:h-8 tab:gap-3">
             <label class=" size-5">
-              <input class="hidden peer" name="theme" type="radio" checked >
+              <input data-value="theme-1" class="hidden peer" name="theme" type="radio" checked >
               <span class=" theme-button"></span>
             </label>
             <label class=" size-5">
-              <input class="hidden peer" name="theme" type="radio">
+              <input data-value="theme-2" class="hidden peer" name="theme" type="radio">
               <span class="theme-button"></span>
             </label>
             <label class=" size-5">
-              <input class="hidden peer" name="theme" type="radio" >
+              <input data-value="theme-3" class="hidden peer" name="theme" type="radio" >
               <span class="theme-button"></span>
             </label>
           </div>
@@ -48,11 +48,11 @@
     </nav>
 
 
-    <div class="display flex items-center justify-end bg-t1-bg-screen w-full h-20 rounded-xl max-h-max
+    <div class="display overflow-hidden flex items-center justify-end bg-t1-bg-screen w-full h-20 rounded-xl max-h-max
     tab:h-40 tab:max-h-none">
       <div id="result" class="p-6 text-4xl relative text-t1-text-light
       tab:text-6xl">
-        112,333,444
+        0
       </div>
     </div>
 
@@ -70,15 +70,15 @@
         <button class="calc-button" id="numkey" data-value="4">4</button>
         <button class="calc-button" id="numkey" data-value="5">5</button>
         <button class="calc-button" id="numkey" data-value="6">6</button>
-        <button class="calc-button" id="operator" data-value="add">+</button>
+        <button class="calc-button" id="operator" data-value="+">+</button>
         <button class="calc-button" id="numkey" data-value="1">1</button>
         <button class="calc-button" id="numkey" data-value="2">2</button>
         <button class="calc-button" id="numkey" data-value="3">3</button>
-        <button class="calc-button" id="operator" data-value="subtract">-</button>
+        <button class="calc-button" id="operator" data-value="-">-</button>
         <button class="calc-button" id="numkey" data-value=".">.</button>
         <button class="calc-button" id="numkey" data-value="0">0</button>
-        <button class="calc-button" id="operator" data-value="divide">/</button>
-        <button class="calc-button peer" id="operator" data-value="multiply">x</button>
+        <button class="calc-button" id="operator" data-value="/">/</button>
+        <button class="calc-button peer" id="operator" data-value="*">x</button>
         <button class="bg-t1-key-bg-blue h-[56px]  text-t1-key-bg-gray text-xl rounded-sm shadow-[0_4px_0px_hsl(224,28%,35%)] col-span-2 
         tab:text-3xl tab:h-[70px] tab:rounded-xl
         active:translate-y-1 transition-all duration-200 hover:bg-t1-key-bg-blue-hover cursor-pointer" id="btn-reset" data-value="reset">RESET</button>
