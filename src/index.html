@@ -10,15 +10,15 @@
   <title>Calculator app</title>
 
 </head>
-<body class="font-league font-bold px-8 bg-t1-bg-main flex justify-center">
+<body class="theme-3 color1 font-league font-bold px-8 bg-bg-main flex justify-center">
   <main class="h-screen flex flex-col gap-8 justify-center max-w-[450px] min-w-[320px] flex-1
   tab:max-w-[640px] tab:gap-8">
 
 
     <nav class=" flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-t1-text-light
+      <h1 class="text-3xl font-bold text-text-min
       tab:text-4xl">calc</h1>
-      <div class="text-t1-text-light text-[12px]  flex items-baseline-last gap-8">
+      <div class="text-text-min text-[12px]  flex items-baseline-last gap-8">
         <p class="relative bottom-1 tab:text-lg">THEME</p>
 
         <div class="relative flex flex-col items-center justify-around">
@@ -27,7 +27,7 @@
             <p class="theme-number">2</p>
             <p class="theme-number">3</p>
           </div>
-          <div class="h-7 bg-t1-bg-toggle rounded-full flex items-center justify-center gap-1.5 px-1.5 
+          <div class="h-7 bg-bg-toggle rounded-full flex items-center justify-center gap-1.5 px-1.5 
           tab:h-8 tab:gap-3">
             <label class=" size-5">
               <input data-value="theme-1" class="hidden peer" name="theme" type="radio" checked >
@@ -48,25 +48,25 @@
     </nav>
 
 
-    <div class="display overflow-hidden flex items-center justify-end bg-t1-bg-screen w-full h-20 rounded-xl max-h-max
+    <div class="display overflow-hidden flex items-center justify-end bg-bg-screen w-full h-20 rounded-xl max-h-max
     tab:h-40 tab:max-h-none">
-      <div id="result" class="p-6 text-4xl relative text-t1-text-light
+      <div id="result" class="p-6 text-4xl relative text-text-min
       tab:text-6xl">
         0
       </div>
     </div>
 
 
-    <div class="bg-t1-bg-toggle p-6 rounded-xl  max-h-max 
+    <div class="bg-bg-toggle p-6 rounded-xl  max-h-max 
     tab:max-h-none">
       <div class="buttons-container grid grid-cols-4 gap-4 gap-y-5
       tab:gap-8">
         <button class="calc-button" id="numkey" data-value="7">7</button>
         <button class="calc-button" id="numkey" data-value="8">8</button>
         <button class="calc-button" id="numkey" data-value="9">9</button>
-        <button class="bg-t1-key-bg-blue text-t1-key-bg-gray h-[56px]  text-xl rounded-sm shadow-[0_4px_0px_hsl(224,28%,35%)]
+        <button class="bg-key-del-reset text-text-del-res-eq h-[56px]  text-xl rounded-sm shadow-key-del-reset
         tab:text-3xl tab:h-[70px] tab:rounded-xl
-        active:translate-y-1 transition-all duration-200 hover:bg-t1-key-bg-blue-hover cursor-pointer" id="btn-del" data-value="delete">DEL</button>
+        active:translate-y-1 transition-all duration-200 hover:bg-key-del-reset-hover cursor-pointer" id="btn-del" data-value="delete">DEL</button>
         <button class="calc-button" id="numkey" data-value="4">4</button>
         <button class="calc-button" id="numkey" data-value="5">5</button>
         <button class="calc-button" id="numkey" data-value="6">6</button>
@@ -79,12 +79,12 @@
         <button class="calc-button" id="numkey" data-value="0">0</button>
         <button class="calc-button" id="operator" data-value="/">/</button>
         <button class="calc-button peer" id="operator" data-value="*">x</button>
-        <button class="bg-t1-key-bg-blue h-[56px]  text-t1-key-bg-gray text-xl rounded-sm shadow-[0_4px_0px_hsl(224,28%,35%)] col-span-2 
+        <button class="bg-key-del-reset h-[56px]  text-text-del-res-eq text-xl rounded-sm shadow-key-del-reset col-span-2 
         tab:text-3xl tab:h-[70px] tab:rounded-xl
-        active:translate-y-1 transition-all duration-200 hover:bg-t1-key-bg-blue-hover cursor-pointer" id="btn-reset" data-value="reset">RESET</button>
-        <button class="bg-t1-key-bg-red h-[56px]  text-t1-key-bg-gray text-xl rounded-sm shadow-[0_4px_0px_hsl(6,70%,34%)] col-span-2 
+        active:translate-y-1 transition-all duration-200 hover:bg-key-del-reset-hover cursor-pointer" id="btn-reset" data-value="reset">RESET</button>
+        <button class="bg-key-theme-equal h-[56px]  text-text-del-res-eq text-xl rounded-sm shadow-theme-equal-shadow col-span-2 
         tab:text-3xl tab:h-[70px] tab:rounded-xl
-        active:translate-y-1 transition-all duration-200 hover:bg-t1-key-bg-red-hover cursor-pointer" id="btn-equal" data-value="equal-to">=</button>
+        active:translate-y-1 transition-all duration-200 hover:bg-key-theme-equal-hover cursor-pointer" id="btn-equal" data-value="equal-to">=</button>
       </div>
     </div>
 
