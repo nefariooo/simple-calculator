@@ -98,13 +98,20 @@ function reset(flag){
     if(flag) calc.result = "";
 }
 
+function applyTheme(selectedTheme){
+    body.classList.remove("theme-1", "theme-2", "theme-3");
+    body.classList.add(selectedTheme);
+    localStorage.setItem("theme", selectedTheme);
+
+    const selectedRadio = document.querySelector(`input[data-value='${selectedTheme}']`);
+    if(selectedRadio) selectedRadio.checked = true;
+
+}
+
 themes.forEach((theme)=>{
     theme.addEventListener("change",()=>{
         if(theme.checked){
-        let selectedTheme = theme.dataset.value;
-        body.classList.remove("theme-1", "theme-2", "theme-3");
-        body.classList.add(selectedTheme);
-        localStorage.setItem("theme", selectedTheme);
+            applyTheme(theme.dataset.value);
         }
     })
 })
@@ -113,8 +120,13 @@ window.addEventListener("DOMContentLoaded", () => {
     let savedTheme = localStorage.getItem("theme");
 
     if (savedTheme) {
-        body.classList.add(savedTheme);
-        const savedRadio = document.querySelector(`input[data-value='${savedTheme}']`);
-        if (savedRadio) savedRadio.checked = true;
+        applyTheme(savedTheme);
+        
+    }else{
+        if(window.matchMedia("(prefers-color-scheme: dark)").matches){
+            applyTheme("theme-1");
+        }else{
+            applyTheme("theme-2");
+        }
     }
 });
