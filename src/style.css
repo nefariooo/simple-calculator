@@ -33,7 +33,7 @@
 
   --color-key-theme-equal: hsl(25, 98%, 40%);
   --color-key-theme-equal-hover: hsl(25, 100%, 69%);
-  --color-key-shadow-theme-equal-shadow: hsl(25, 99%, 27%);
+  --color-key-shadow-theme-equal-shadow: hsl(25, 43%, 67%);
 
   --color-key-numkey: hsl(0, 0%, 90%);
   --color-key-numkey-hover: hsl(0, 0%, 100%);
@@ -54,9 +54,9 @@
 
   --color-key-theme-equal: hsl(176, 100%, 44%);
   --color-key-theme-equal-hover: hsl(176, 59%, 77%);
-  --color-key-shadow-cyan: hsl(177, 92%, 70%);
+  --color-key-shadow-theme-equal-shadow: hsl(177, 19%, 63%);
 
-  --color-key-bg-purple-alt: hsl(268, 47%, 21%);
+  --color-key-numkey: hsl(268, 47%, 21%);
   --color-key-numkey-hover: hsl(268, 16%, 52%);
   --color-key-shadow-purple-alt: hsl(290, 70%, 36%);
 
@@ -99,7 +99,7 @@
 
 
 .theme-button{
-    @apply mb-0.5 border-1 border-key-theme-equal peer-[&:not(:checked)]:bg-transparent  size-5 bg-key-theme-equal inline-block rounded-full peer-checked:opacity-100 hover:bg-[#634039] transition-opacity duration-200 cursor-pointer ;
+    @apply mb-0.5 border-1 border-key-theme-equal peer-[&:not(:checked)]:bg-transparent  size-5 bg-key-theme-equal inline-block rounded-full peer-checked:opacity-100 hover:bg-key-shadow-theme-equal-shadow transition-opacity duration-200 cursor-pointer ;
 }
 
 .calc-button{
@@ -108,4 +108,6 @@
    active:translate-y-1 cursor-pointer hover:bg-key-numkey-hover
   transition-all duration-200;
 }  
+
+
 

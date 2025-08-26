@@ -6,6 +6,8 @@ const calc = {
     isFirstNumInserted: false
 }
 const display = document.querySelector("#result");
+const body = document.querySelector("body");
+const themes = document.querySelectorAll("input[name='theme']");
 
 document.querySelectorAll("#numkey").forEach((btn)=>{
     btn.addEventListener("click", ()=>{
@@ -95,3 +97,24 @@ function reset(flag){
     calc.operator = "";
     if(flag) calc.result = "";
 }
+
+themes.forEach((theme)=>{
+    theme.addEventListener("change",()=>{
+        if(theme.checked){
+        let selectedTheme = theme.dataset.value;
+        body.classList.remove("theme-1", "theme-2", "theme-3");
+        body.classList.add(selectedTheme);
+        localStorage.setItem("theme", selectedTheme);
+        }
+    })
+})
+
+window.addEventListener("DOMContentLoaded", () => {
+    let savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+        body.classList.add(savedTheme);
+        const savedRadio = document.querySelector(`input[data-value='${savedTheme}']`);
+        if (savedRadio) savedRadio.checked = true;
+    }
+});

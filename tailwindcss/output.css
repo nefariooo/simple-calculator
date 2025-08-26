@@ -502,7 +502,7 @@
   --color-key-shadow-del-reset: hsl(185, 58%, 25%);
   --color-key-theme-equal: hsl(25, 98%, 40%);
   --color-key-theme-equal-hover: hsl(25, 100%, 69%);
-  --color-key-shadow-theme-equal-shadow: hsl(25, 99%, 27%);
+  --color-key-shadow-theme-equal-shadow: hsl(25, 43%, 67%);
   --color-key-numkey: hsl(0, 0%, 90%);
   --color-key-numkey-hover: hsl(0, 0%, 100%);
   --color-key-shadow-gray-orange: hsl(35, 11%, 61%);
@@ -519,8 +519,8 @@
   --color-key-shadow-purple: hsl(285, 91%, 52%);
   --color-key-theme-equal: hsl(176, 100%, 44%);
   --color-key-theme-equal-hover: hsl(176, 59%, 77%);
-  --color-key-shadow-cyan: hsl(177, 92%, 70%);
-  --color-key-bg-purple-alt: hsl(268, 47%, 21%);
+  --color-key-shadow-theme-equal-shadow: hsl(177, 19%, 63%);
+  --color-key-numkey: hsl(268, 47%, 21%);
   --color-key-numkey-hover: hsl(268, 16%, 52%);
   --color-key-shadow-purple-alt: hsl(290, 70%, 36%);
   --color-text-maj: hsl(52, 100%, 62%);
@@ -551,7 +551,7 @@
   }
   &:hover {
     @media (hover: hover) {
-      background-color: #634039;
+      background-color: var(--color-key-shadow-theme-equal-shadow);
     }
   }
 }
