@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev" : "npx @tailwindcss/cli -i ./src/style.css -o ./src/output.css --watch",
-    "post" : "npx @tailwindcss/cli -i ./src/style.css -o ./tailwindcss/output.css"
+    "post" : "npx @tailwindcss/cli -i ./src/style.css -o ./src/output.css"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
